@@ -1,6 +1,6 @@
 # Kalman Filter Application With Newton's Law of Cooling
 
-This project supposes a (simplified) dynamic system that models the heating of a house as illistrated in the figure below; inspired by [[1](https://www.sharetechnote.com/html/DE_Modeling_Example_Cooling.html)].
+This project supposes a (simplified) dynamic system that models the heating of a house as illustrated in the figure below; inspired by [[1](https://www.sharetechnote.com/html/DE_Modeling_Example_Cooling.html)].
 
 ![house](newton_cooling.svg)
 
@@ -24,9 +24,10 @@ The goal is to design a [Kalman filter](https://github.com/rlabbe/Kalman-and-Bay
 
 ## Kalman Filter
 
-Kalman filter can summarized using the following equations:
+Kalman filter can be summarized using the following equations:
 
-$\begin{array}{|l|l|}
+$$
+\begin{array}{|l|l|}
 \hline
 \text{Prediction} & \text{Update}\\
 \hline
@@ -35,7 +36,8 @@ $\begin{array}{|l|l|}
 & \mathbf{x}=\hat{\mathbf{x}}+\mathbf{K}\mathbf{y}\\
 & \mathbf{P}=(\mathbf{I}-\mathbf{K}\mathbf{H})\hat{\mathbf{P}}\\
 \hline
-\end{array}$
+\end{array}
+$$
 
 To tackle the aforementioned problem, I employ Euler's method to approximate the ODEs. Based on these approximations, I generate true and noisy temperature measurements. Subsequently, I apply the Kalman filter. The figure below displays one outcome of the simulation. For further details, please refer to the file [`newton_cooling.ipynb`](newton_cooling.ipynb).
 
