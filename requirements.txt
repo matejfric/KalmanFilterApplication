@@ -1,0 +1,6 @@
+numpy
+scipy
+matplotlib # plots
+seaborn # plots
+ipykernel # jupyter notebooks
+noise # perlin noise
